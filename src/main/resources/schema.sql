@@ -39,6 +39,10 @@ CREATE TABLE PAYMENT COMMENT '결제내역' (
   , APRV_TYPE       VARCHAR(2)                  COMMENT '승인타입'
   , APRV_TIME       TIMESTAMP                   COMMENT '승인일시'
   , PMT_AMT         BIGINT                      COMMENT '결제금액'
+  , REGPE_ID        VARCHAR(100)     NOT NULL    COMMENT  '등록자'
+  , REG_DTS         TIMESTAMP            NOT NULL    COMMENT  '등록일시'
+  , MODPE_ID        VARCHAR(100)     NOT NULL    COMMENT  '수정자'
+  , MOD_DTS         TIMESTAMP            NOT NULL    COMMENT  '수정일시'
   , PRIMARY KEY (PMT_ID)
 );
 

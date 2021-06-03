@@ -168,6 +168,9 @@ public class PaymentGatewayLogic implements PaymentGatewayService {
         //결재 승인시 DTO 생성
         PaymentDto paymentDto = new PaymentDto(mbrId, pmtCode, pmtType, pmtAmt, "10");
 
+        paymentDto.setRegpeId("YUN");
+        paymentDto.setModpeId("YUN");
+
         //결재방법 공통로직 수행
         this.paymentCodeCommonLogicExecute(paymentDto);
 

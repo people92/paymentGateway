@@ -1,6 +1,7 @@
 package com.ssg.homework.t2021hw.store.jpo;
 
 import com.ssg.homework.t2021hw.dto.PaymentDto;
+import com.ssg.homework.t2021hw.store.jpo.audit.AuditJpo;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,7 +17,7 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @Getter
 @Setter
-public class PaymentJpo {
+public class PaymentJpo extends AuditJpo {
 
     @Id
     @Column(name = "PMT_ID")

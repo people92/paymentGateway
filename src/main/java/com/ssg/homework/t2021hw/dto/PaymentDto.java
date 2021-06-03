@@ -5,8 +5,11 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 
+import javax.persistence.Column;
 import java.sql.Timestamp;
+import java.util.Date;
 
 @ApiModel(description = "PAYMENT ENTITY DTO")
 @Getter
@@ -44,6 +47,10 @@ public class PaymentDto {
 
 	@ApiModelProperty(example = "0000000001", notes = "이전결제ID")
 	private String bfPmtCode;
+
+	private String regpeId; //등록자
+
+	private String modpeId; //수정자
 
 	public PaymentDto(String mbrId, String pmtCode, String pmtType, long pmtAmt, String aprvType){
 		this.mbrId = mbrId;
